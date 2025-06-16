@@ -10,6 +10,13 @@ const Divider = styled(MuiDivider)`
 
 const Body = styled(Box)`
   font-size: 14px;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		list-style-type: disc;
+		padding-left: 15px;
+	}
 `
 
 const formatDate = (dateStr: string): string => {
@@ -75,7 +82,7 @@ const Company: FC<TypeProps> = ({
 
   return (
     <Block>
-      <Box display={'flex'} gap={1} padding={1}>
+      <Box display={'flex'} gap={1} padding={1.25}>
         <Box>
           <Avatar src={logo ? logo : EmptyLogo} alt={name}/>
         </Box>
@@ -99,7 +106,7 @@ const Company: FC<TypeProps> = ({
       {skills && (
         <>
           <Divider/>
-          <Box padding={1}>
+          <Box padding={1.25}>
             {skills.map((skill, index) => (
               <Chip
                 key={index}
@@ -115,7 +122,7 @@ const Company: FC<TypeProps> = ({
       {list && (
         <>
           <Divider/>
-          <Body padding={1}>
+          <Body padding={1.25}>
             <ul>
               {list.map((item, index) => (
                 <li key={index}>{item}</li>
