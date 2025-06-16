@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AboutMeContent from '../AboutMeContent';
 import WallpaperIcon from '../../../assets/icons/wallpaper.png';
 import Wallpaper from './components/wallpaper/Wallpaper';
+import AvatarImg from '../../../assets/images/avatar.jpg';
 
 const Wrapper = styled(Box)`
   display: flex;
@@ -53,6 +54,7 @@ const SidebarItem = styled(Box)<{ selected?: boolean }>`
   border-radius: 5px;
   padding: 5px;
   gap: 5px;
+  cursor: pointer;
 `
 
 const AboutMe = () => {
@@ -87,7 +89,7 @@ const SettingsContent = () => {
           <Search placeholder={'Search'} variant="outlined" size={'small'} fullWidth/>
         </Box>
         <SidebarItem selected={selectedContent === 'about_me'} onClick={() => setSelectedContent('about_me')}>
-          <Avatar />
+          <Avatar src={AvatarImg}/>
           <Box>
             <Typography fontSize={13} fontWeight={'bold'} lineHeight={1.2}>Mykola Nesterchuk</Typography>
             <Typography fontSize={11} lineHeight={1.2}>Software Engineer</Typography>

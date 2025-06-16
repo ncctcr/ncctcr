@@ -94,7 +94,13 @@ const Wallpaper = () => {
             <Typography fontSize={13} fontWeight={'bold'}>{item.name}</Typography>
             <HorizontalList>
               {item.images.map((image, imgIndex) => (
-                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} key={imgIndex}>
+                <Box
+                  display={'flex'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
+                  key={imgIndex}
+                  style={{cursor: 'pointer'}}
+                >
                   <Img
                     key={imgIndex}
                     src={image.src}
