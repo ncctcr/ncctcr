@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Avatar, Box, Grid, Rating, Typography } from '@mui/material';
+import { Avatar, Box, Grid, Rating, Typography, Link } from '@mui/material';
 import AvatarImg from '../../assets/images/avatar.jpg'
 import Block from '../shared/Block';
 import Wrapper from '../shared/Wrapper';
@@ -31,7 +31,13 @@ const AboutMeContent = () => {
       <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
         <Avatar src={AvatarImg} sx={{ width: 100, height: 100 }} alt={'Avatar'}/>
         <Typography fontSize={24} fontWeight={'bold'} textAlign={'center'}>Mykola Nesterchuk</Typography>
-        <Typography>n.ncctcr@gmail.com</Typography>
+        <Link
+          href={'mailto:n.ncctcr@gmail.com'}
+          target={'_blank'}
+          color={'grey.300'}
+        >
+          n.ncctcr@gmail.com
+        </Link>
       </Box>
       <Block title={'About'}>
         <Box display={'flex'} flexDirection={'column'} p={2} gap={2}>
