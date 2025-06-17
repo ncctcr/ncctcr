@@ -11,9 +11,14 @@
 	justify-content: center;
 	width: 100%;
 	gap: 10px;
+	background: #00000017;
+	padding: 10px;
+	border: 1px solid #00000021;
+	border-radius: 15px;
 }
 
 .title {
 	font-size: 110%;
 	text-align: center;
+	margin-bottom: 10px;
 }
