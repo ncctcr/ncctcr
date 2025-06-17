@@ -39,7 +39,7 @@ const Body = styled.div`
 type TypeProps = {
   title: string;
   children: ReactNode
-  icon?: string;
+  icon?: string | ReactNode;
   backgroundIcon?: boolean;
   styles?: {
     wrapper?: CSSProperties;
@@ -61,7 +61,7 @@ const Description: FC<TypeProps> = ({
 
   return (
     <Wrapper style={styles?.wrapper} isMobile={isMobile}>
-      {icon && <img src={icon} alt={`${icon} icon`} style={backgroundIcon ? {background: '#000'} : {}}/>}
+      {icon && typeof icon === 'string' ? <img src={icon} alt={`${icon} icon`} style={backgroundIcon ? {background: '#000'} : {}}/> : icon}
       <Content style={styles?.content}>
         <Title style={styles?.title}><span>{title}</span></Title>
         <Body style={styles?.body}><span>{children}</span></Body>

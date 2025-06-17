@@ -10,6 +10,7 @@ import ContactIcon from '../../assets/icons/dock/contact.png';
 import PuzzleIcon from '../../assets/icons/games/2048.png';
 import BlackjackIcon from '../../assets/icons/games/blackjack.png';
 import AboutMeIcon from '../../assets/icons/dock/about-me.png';
+import SettingsIcon from '../../assets/icons/dock/settings.png';
 import SkillsContent from '../contents/skills-content/SkillsContent';
 import SelectedView from './SelectedView';
 import ExperienceContent from '../contents/experience-content/ExperienceContent';
@@ -21,6 +22,7 @@ import Blackjack from '../contents/games-content/games/blackjack/Blackjack';
 import AboutMeContent from '../contents/AboutMeContent';
 import UnitedWidget from '../widgets/components/UnitedWidget';
 import AnalogTimeWidget from '../widgets/components/analog-time-widget/AnalogTimeWidget';
+import SettingsMobileContent from '../contents/settings-mobile-content/SettingsMobileContent';
 
 const Icon = styled.img`
   width: 100%;
@@ -94,6 +96,13 @@ const MainView = (props: {onClick: (view: number, event: React.MouseEvent) => vo
       <Grid size={6}>
         <UnitedWidget/>
       </Grid>
+      <Grid size={6}>
+        <Grid container spacing={SPACING}>
+          <Grid size={6} onClick={(e) => props.onClick(9, e)}>
+            <Application name={'Settings'} icon={SettingsIcon}/>
+          </Grid>
+        </Grid>
+      </Grid>
     </Grid>
     {props.children}
   </Box>
@@ -124,6 +133,7 @@ const MobileView = () => {
     6: <SelectedView clickPosition={clickPosition} styles={{body: {background: '#cebda6'}}} onBack={handleBack}><Puzzle/></SelectedView>,
     7: <SelectedView clickPosition={clickPosition} styles={{body: {background: 'radial-gradient(circle,rgba(0, 84, 28, 1) 0%, rgba(0, 48, 15, 1) 100%)'}}} onBack={handleBack}><Blackjack/></SelectedView>,
     8: <SelectedView clickPosition={clickPosition} onBack={handleBack}><AboutMeContent/></SelectedView>,
+    9: <SelectedView clickPosition={clickPosition} onBack={handleBack}><SettingsMobileContent/></SelectedView>,
   };
 
   return (

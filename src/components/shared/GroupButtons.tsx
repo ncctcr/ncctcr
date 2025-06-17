@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useMediaQuery, useTheme } from '@mui/material';
@@ -51,7 +51,7 @@ const Item = styled.div`
 
 type TypeProps = {
   title?: string;
-  links: Array<{name: string, icon?: string, bg?: string, key: string}>
+  links: Array<{name: string, icon?: string | ReactNode, bg?: string, key: string}>
   onClick?: (key: string) => void;
 }
 
@@ -66,14 +66,14 @@ const GroupButtons: FC<TypeProps> = ({ title, links, onClick }) => {
         {links.map((i, index) => (
           <Item key={index} onClick={() => onClick && onClick(i.key)}>
             <div className={'group'}>
-              {i.icon && (
+              {i.icon && typeof i.icon === 'string' ? (
                 <img
                   className={'icon'}
                   src={i.icon}
                   alt={`${i.name} icon`}
                   style={i.bg ? {background: i.bg} : {}}
                 />
-              )}
+              ) : i.icon}
               {i.name}
             </div>
             <ArrowForwardIosIcon className={'arrow'}/>
