@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c277e35d.css",
-    "main.js": "/static/js/main.9047e6d2.js",
+    "main.js": "/static/js/main.338b8f5c.js",
     "static/js/453.ad631ce7.chunk.js": "/static/js/453.ad631ce7.chunk.js",
     "static/media/sequoia-sunrise.png": "/static/media/sequoia-sunrise.c260bad6ee67dfaff1f9.png",
     "static/media/sonoma-horizon.png": "/static/media/sonoma-horizon.7da3b09dd9555365f7a6.png",
@@ -33,7 +33,6 @@
     "static/media/1.png": "/static/media/1.a7277f4d415feb847ae3.png",
     "static/media/20.png": "/static/media/20.d1ec10c479e12ca61a22.png",
     "static/media/5.png": "/static/media/5.cf8c05a24e74537715d9.png",
-    "static/media/wallpaper.png": "/static/media/wallpaper.0d433fc3d216e408d5d9.png",
     "static/media/chartjs.png": "/static/media/chartjs.4a930fbc8ffc21fbeb8c.png",
     "static/media/avatar.jpg": "/static/media/avatar.39826b28eb969cba0385.jpg",
     "static/media/games.png": "/static/media/games.cd0d0a9a0504566976e5.png",
@@ -51,11 +50,11 @@
     "static/media/hide.svg": "/static/media/hide.031ae33fb154ac7b17135946955b9d84.svg",
     "static/media/resize.svg": "/static/media/resize.336c41f63adfa4399a297f91a130001b.svg",
     "main.c277e35d.css.map": "/static/css/main.c277e35d.css.map",
-    "main.9047e6d2.js.map": "/static/js/main.9047e6d2.js.map",
+    "main.338b8f5c.js.map": "/static/js/main.338b8f5c.js.map",
     "453.ad631ce7.chunk.js.map": "/static/js/453.ad631ce7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c277e35d.css",
-    "static/js/main.9047e6d2.js"
+    "static/js/main.338b8f5c.js"
   ]
 }
