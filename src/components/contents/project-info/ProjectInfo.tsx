@@ -3,9 +3,9 @@ import {
   Typography,
   Box,
 } from '@mui/material';
-import Wrapper from '../../../shared/Wrapper';
-import Block from '../../../shared/Block';
-import Description from '../../../shared/Description';
+import Wrapper from '../../shared/Wrapper';
+import Block from '../../shared/Block';
+import Description from '../../shared/Description';
 import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 
 const projectInfo = [
@@ -47,7 +47,7 @@ const Section = ({ data }: {data: {name: string; value: string}[]}) => {
   )
 }
 
-const About = () => {
+const ProjectInfo = () => {
   return (
     <Wrapper>
       <Description title={'About'} icon={<InfoOutlineIcon />}>
@@ -72,4 +72,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default ProjectInfo;

@@ -2,9 +2,13 @@ import React, { ReactNode, useState } from 'react';
 import { Avatar, Box, TextField, Typography } from '@mui/material';
 import styled from 'styled-components';
 import AboutMeContent from '../AboutMeContent';
-import WallpaperIcon from '../../../assets/icons/wallpaper.png';
 import Wallpaper from './components/wallpaper/Wallpaper';
 import AvatarImg from '../../../assets/images/avatar.jpg';
+import ReleaseNotes from '../release-notes/ReleaseNotes';
+import ProjectInfo from '../project-info/ProjectInfo';
+import CollectionsIcon from '@mui/icons-material/Collections';
+import NewReleasesIcon from '@mui/icons-material/NewReleases';
+import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 
 const Wrapper = styled(Box)`
   display: flex;
@@ -57,26 +61,34 @@ const SidebarItem = styled(Box)<{ selected?: boolean }>`
   cursor: pointer;
 `
 
-const AboutMe = () => {
+const Container = ({ title, children }: {title: string, children: React.ReactNode}) => {
   return (
     <>
       <Header display={'flex'} alignItems={'center'}>
-        <Typography fontSize={16} fontWeight={'bold'}>About me</Typography>
+        <Typography fontSize={16} fontWeight={'bold'}>{title}</Typography>
       </Header>
       <Content>
-        <AboutMeContent />
+        {children}
       </Content>
     </>
   );
 }
+
+const SIDEBAR_ITEMS = [
+  { title: 'Wallpaper', key: 'wallpaper', icon: <CollectionsIcon fontSize={'small'} /> },
+  { title: 'Release Notes', key: 'release_notes', icon: <NewReleasesIcon fontSize={'small'} /> },
+  { title: 'About', key: 'about', icon: <InfoOutlineIcon fontSize={'small'} /> },
+]
 
 const SettingsContent = () => {
   const [selectedContent, setSelectedContent] = useState<string | null>('wallpaper');
 
   const getContent = (key: string | null) => {
     const CONTENT: {[key: string]: ReactNode} = {
-      'about_me': <AboutMe />,
-      'wallpaper': <Wallpaper />
+      'about_me': <Container title={'About me'} children={<AboutMeContent/>}/>,
+      'wallpaper': <Wallpaper />,
+      'release_notes': <Container title={'Release Notes'} children={<ReleaseNotes/>}/>,
+      'about': <Container title={'About'} children={<ProjectInfo />}/>
     }
 
     return key ? CONTENT[key] || null : null;
@@ -95,12 +107,22 @@ const SettingsContent = () => {
             <Typography fontSize={11} lineHeight={1.2}>Software Engineer</Typography>
           </Box>
         </SidebarItem>
-        <SidebarItem padding={0.5} selected={selectedContent === 'wallpaper'} onClick={() => setSelectedContent('wallpaper')}>
-          <img src={WallpaperIcon} height={23} width={23} alt={'Wallpaper'}/>
-          <Typography fontSize={13}>Wallpaper</Typography>
-        </SidebarItem>
+
+        <Box display={'flex'} flexDirection={'column'} gap={1}>
+          {SIDEBAR_ITEMS.map((item, index) => (
+            <SidebarItem
+              key={index}
+              padding={0.5}
+              selected={selectedContent === item.key}
+              onClick={() => setSelectedContent(item.key)}>
+              {item.icon}
+              <Typography fontSize={13} fontWeight={500}>{item.title}</Typography>
+            </SidebarItem>
+          ))}
+        </Box>
+
       </Sidebar>
-      <Box width={'100%'} height={'100%'}>
+      <Box width={'100%'} height={'calc(100% - 46px)'}>
         {getContent(selectedContent)}
       </Box>
     </Wrapper>

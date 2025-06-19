@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import MainView from './components/MainView';
+import MainView from './components/main-view/MainView';
 import styled from 'styled-components';
 import { Button } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import About from './components/About';
+import ProjectInfo from '../project-info/ProjectInfo';
+import ReleaseNotes from '../release-notes/ReleaseNotes';
+import AboutMeContent from '../AboutMeContent';
 
 const Buttons = styled.div`
   position: absolute;
@@ -40,7 +42,9 @@ const SettingsMobileContent = () => {
       {selectedView === null && (
         <MainView onClick={setSelectedView} />
       )}
-      {selectedView === 'about' && <About />}
+      {selectedView === 'about' && <ProjectInfo />}
+      {selectedView === 'release_notes' && <ReleaseNotes />}
+      {selectedView === 'about_me' && <AboutMeContent />}
     </>
   );
 };

@@ -17,7 +17,7 @@ const Header = styled(Box)`
 `
 
 const Content = styled(Box)`
-  height: calc(100% - 200px);
+  height: calc(100% - 154px);
 	width: 100%;
   background: #2e2e2e;
   overflow: auto;
