@@ -10,7 +10,7 @@ import SettingsIcon from '../../../../../assets/icons/dock/settings.png';
 import GamesIcon from '../../../../../assets/icons/dock/games.png';
 import { Fade, Tooltip } from '@mui/material';
 import { useWindows } from '../../../../../contexts/WindowContext';
-import { TypeWindowSettings, TypeWindowStyles } from '../../../../../interfaces';
+import { TypeWindowSettings, TypeWindowStyles } from '../../../../../interfaces/windows';
 import AboutMe from '../../../../contents/about-me/AboutMe';
 import Skills from '../../../../contents/skills/Skills';
 import Experience from '../../../../contents/experience/Experience';

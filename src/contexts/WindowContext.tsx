@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { TypeWindow, WindowsState } from '../interfaces';
 import Todo from '../components/contents/todo/Todo'
+import { TypeWindow, WindowsState } from '../interfaces/windows';
 
 const INIT_STATE = {
   highestZIndex: 10,

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import CloseIcon from '../../../../../../assets/icons/close.svg';
 import HideIcon from '../../../../../../assets/icons/hide.svg';
 import ReziseIcon from '../../../../../../assets/icons/resize.svg';
-import { TypeWindowStyles } from '../../../../../../interfaces';
+import { TypeWindowStyles } from '../../../../../../interfaces/windows';
 
 const Wrapper = styled('div')`
 	display: flex;
