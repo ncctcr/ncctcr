@@ -1,6 +1,6 @@
 export const shortenText = (text: string, maxLength: number = 15): string => {
   const dotIndex = text.lastIndexOf('.');
-  if (dotIndex === -1) return text; // нет расширения — не трогаем
+  if (dotIndex === -1) return text;
 
   const name = text.slice(0, dotIndex);
   const ext = text.slice(dotIndex);

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { TypeWindow, WindowsState } from '../interfaces';
-import StickerContent from '../components/contents/StickerContent';
+import Todo from '../components/contents/todo/Todo'
 
 const INIT_STATE = {
   highestZIndex: 10,
@@ -14,7 +14,7 @@ const INIT_STATE = {
       title: '',
       zIndex: 1,
       key: 'sticker',
-      content: <StickerContent />,
+      content: <Todo />,
       styles: {
         header: {
           background: 'transparent',

@@ -1,5 +1,5 @@
-// CRA стандартный serviceWorkerRegistration
-// Источник: https://cra.link/PWA
+// CRA standard serviceWorkerRegistration
+// Source: https://cra.link/PWA
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
