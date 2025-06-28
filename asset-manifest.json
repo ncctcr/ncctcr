@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c277e35d.css",
-    "main.js": "/static/js/main.338b8f5c.js",
+    "main.css": "/static/css/main.65a9792c.css",
+    "main.js": "/static/js/main.16566b0d.js",
     "static/js/453.ad631ce7.chunk.js": "/static/js/453.ad631ce7.chunk.js",
     "static/media/sequoia-sunrise.png": "/static/media/sequoia-sunrise.c260bad6ee67dfaff1f9.png",
     "static/media/sonoma-horizon.png": "/static/media/sonoma-horizon.7da3b09dd9555365f7a6.png",
@@ -49,12 +49,12 @@
     "static/media/close.svg": "/static/media/close.1d2aeb4cd638d64b9a1846b630e7cdfc.svg",
     "static/media/hide.svg": "/static/media/hide.031ae33fb154ac7b17135946955b9d84.svg",
     "static/media/resize.svg": "/static/media/resize.336c41f63adfa4399a297f91a130001b.svg",
-    "main.c277e35d.css.map": "/static/css/main.c277e35d.css.map",
-    "main.338b8f5c.js.map": "/static/js/main.338b8f5c.js.map",
+    "main.65a9792c.css.map": "/static/css/main.65a9792c.css.map",
+    "main.16566b0d.js.map": "/static/js/main.16566b0d.js.map",
     "453.ad631ce7.chunk.js.map": "/static/js/453.ad631ce7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c277e35d.css",
-    "static/js/main.338b8f5c.js"
+    "static/css/main.65a9792c.css",
+    "static/js/main.16566b0d.js"
   ]
 }
