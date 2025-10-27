@@ -9,6 +9,10 @@ export const RELEASE_NOTES = [
         description: 'Fixed education grid view',
         type: 'bug-fix'
       },
+      {
+        title: 'Background',
+        description: 'Added new wallpaper Gothic Lion and set up it as default'
+      }
     ]
   },
   {

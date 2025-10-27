@@ -8,7 +8,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { WindowsProvider } from './contexts/WindowContext';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { BackgroundProvider } from './contexts/BackgroundContext';
-import Default from './assets/backgrounds/default.jpeg';
+import GothicLion from './assets/backgrounds/gothic-lion.jpg';
 import { createTheme } from './theme/theme';
 
 const root = ReactDOM.createRoot(
@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BackgroundProvider defaultBackground={`url(${Default})`}>
+    <BackgroundProvider defaultBackground={`url(${GothicLion})`}>
       <ThemeProvider theme={createTheme('light')}>
         <WindowsProvider>
           <CssBaseline/>
