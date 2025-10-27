@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.65a9792c.css",
-    "main.js": "/static/js/main.16566b0d.js",
+    "main.js": "/static/js/main.37bf9b9f.js",
     "static/js/453.ad631ce7.chunk.js": "/static/js/453.ad631ce7.chunk.js",
     "static/media/sequoia-sunrise.png": "/static/media/sequoia-sunrise.c260bad6ee67dfaff1f9.png",
     "static/media/sonoma-horizon.png": "/static/media/sonoma-horizon.7da3b09dd9555365f7a6.png",
     "static/media/patagonia-mountain.jpg": "/static/media/patagonia-mountain.92073868b573413bca8c.jpg",
-    "static/media/default.jpeg": "/static/media/default.3a73dd525424eec04eaa.jpeg",
+    "static/media/abstract.jpeg": "/static/media/abstract.3a73dd525424eec04eaa.jpeg",
     "static/media/covid-challenge-hackathon.png": "/static/media/covid-challenge-hackathon.c26fa5d265195efe6016.png",
+    "static/media/gothic-lion.jpg": "/static/media/gothic-lion.42efa05cae8a2f8e5c45.jpg",
     "static/media/united24.png": "/static/media/united24.3f862dc20f8398855bd6.png",
     "static/media/about-me.png": "/static/media/about-me.f98df581f6d63645c1be.png",
     "static/media/pro-black.png": "/static/media/pro-black.b89e249f9832830ffcc2.png",
@@ -50,11 +51,11 @@
     "static/media/hide.svg": "/static/media/hide.031ae33fb154ac7b17135946955b9d84.svg",
     "static/media/resize.svg": "/static/media/resize.336c41f63adfa4399a297f91a130001b.svg",
     "main.65a9792c.css.map": "/static/css/main.65a9792c.css.map",
-    "main.16566b0d.js.map": "/static/js/main.16566b0d.js.map",
+    "main.37bf9b9f.js.map": "/static/js/main.37bf9b9f.js.map",
     "453.ad631ce7.chunk.js.map": "/static/js/453.ad631ce7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65a9792c.css",
-    "static/js/main.16566b0d.js"
+    "static/js/main.37bf9b9f.js"
   ]
 }
