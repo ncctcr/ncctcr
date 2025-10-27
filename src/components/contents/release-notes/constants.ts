@@ -2,6 +2,16 @@
 
 export const RELEASE_NOTES = [
   {
+    title: 'October 27, 2025',
+    list: [
+      {
+        title: 'Education view',
+        description: 'Fixed education grid view',
+        type: 'bug-fix'
+      },
+    ]
+  },
+  {
     title: 'June 19, 2025',
     list: [
       {

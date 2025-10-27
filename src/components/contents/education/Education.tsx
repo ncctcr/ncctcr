@@ -28,9 +28,11 @@ const Education = () => {
       {EDUCATION_DATA.map((i, index) => (
         <Block title={i.title} brackets={i.brackets} key={index}>
           <Box p={2}>
-            {i.rows.map((row, key) => (
-              <Row name={row.name} value={row.value} key={key} />
-            ))}
+            <Grid container spacing={2}>
+              {i.rows.map((row, key) => (
+                <Row name={row.name} value={row.value} key={key} />
+              ))}
+            </Grid>
           </Box>
         </Block>
       ))}
