@@ -11,7 +11,8 @@ export const RELEASE_NOTES = [
       },
       {
         title: 'Background',
-        description: 'Added new wallpaper Gothic Lion and set up it as default'
+        description: 'Added new wallpaper Gothic Lion and set up it as default',
+        type: 'enhancement'
       }
     ]
   },
