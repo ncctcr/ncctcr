@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Box, Grid, Link, Typography } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import ChromaticBlur from 'chromatic-blur';
+import { isChromium } from '../../../utils/functions';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ background: boolean }>`
 	width: 100%;
 	height: 100%;
-	background: rgb(46, 46, 46);
-	backdrop-filter: blur(10px);
 	border-radius: 17px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	padding: 22px 12px;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	color: #d4d4d4
+	color: #d4d4d4;
+  
+	background: ${(props) =>
+    props.background ? 'rgb(46, 46, 46);' : ''};
 `;
 
 const Item = styled(Box)`
@@ -47,8 +50,25 @@ const Circle = styled(Box)`
 `
 
 const ContactsWidget = () => {
+  const [isBackground, setIsBackground] = useState(false);
+
+  useEffect(() => {
+    const chromium = isChromium();
+    setIsBackground(!chromium);
+
+    let blurInstance: ChromaticBlur | null = null;
+
+    if (chromium) {
+      blurInstance = new ChromaticBlur('.contact-widget');
+    }
+
+    return () => {
+      blurInstance?.destroy();
+    };
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper className="contact-widget" background={isBackground}>
       <Grid container spacing={2}>
         <Grid size={3}>
           <Item>

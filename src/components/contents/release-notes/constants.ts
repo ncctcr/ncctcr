@@ -13,6 +13,11 @@ export const RELEASE_NOTES = [
         title: 'Background',
         description: 'Added new wallpaper Gothic Lion and set up it as default',
         type: 'enhancement'
+      },
+      {
+        title: 'Chromatic blur',
+        description: 'Added supporting chromatic blur for Contact Widget. It for desktop on Chromium engine browsers',
+        type: 'new-feature'
       }
     ]
   },

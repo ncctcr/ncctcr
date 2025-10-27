@@ -17,3 +17,13 @@ export const shortenText = (text: string, maxLength: number = 15): string => {
 
   return `${start}…${end}${ext}`;
 }
+
+export const isChromium = (): boolean => {
+  const ua = navigator.userAgent;
+  const isChrome = /Chrome/.test(ua) && !/Edg|OPR|Brave/.test(ua);
+  const isEdge = /Edg/.test(ua);
+  const isOpera = /OPR/.test(ua);
+  const isBrave = (navigator as any).brave !== undefined;
+
+  return isChrome || isEdge || isOpera || isBrave;
+}
