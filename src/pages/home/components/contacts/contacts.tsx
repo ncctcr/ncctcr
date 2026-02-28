@@ -22,7 +22,7 @@ const Contacts = () => {
             <Grid container spacing={2}>
                 {DATA.map((i, index) => (
                     <Grid size={6} key={index}>
-                        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
+                        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1} maxHeight={'106px'}>
                             <Circle borderWidth={10}>
                                 <Link to={i.to} target={'_blank'} style={{
                                     height: '100%',
