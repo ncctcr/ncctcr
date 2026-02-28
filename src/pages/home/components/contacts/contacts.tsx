@@ -25,7 +25,6 @@ const Contacts = () => {
                         <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1} maxHeight={'106px'}>
                             <Circle borderWidth={10}>
                                 <Link to={i.to} target={'_blank'} style={{
-                                    height: '100%',
                                     width: '100%',
                                     display: 'flex',
                                     justifyContent: 'center',
