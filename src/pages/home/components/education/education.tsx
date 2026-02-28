@@ -1,6 +1,7 @@
 import React from 'react';
 import {EDUCATION_DATA} from "../../../../components/contents/education/constants";
 import {Box, Typography} from "@mui/material";
+import Card from "../card/card";
 
 const getSpeciality = (row: { name: string, value: string }[], name: string) => {
     const foundSpeciality = row.find((i) => i.name === name);
@@ -26,7 +27,7 @@ const getGradeStyle = (title: string) => {
 
 const Education = () => {
     return (
-        <>
+        <Card id={'education-section'} title={'Education'}>
             {EDUCATION_DATA.map((item, index) => {
                 const style = getGradeStyle(item.title);
                 return (
@@ -48,7 +49,7 @@ const Education = () => {
                     </Box>
                 )
             })}
-        </>
+        </Card>
     );
 };
 

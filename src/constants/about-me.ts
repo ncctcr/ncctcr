@@ -3,7 +3,7 @@ export const ABOUT_ME_DATA = [
   {
     title: 'About',
     rows: [
-      'I am a frontend developer who specializes in ReactJS. I have a total of 5+ years of experience working with web applications and possess deep skills in creating modern web applications and user interface components using ReactJS and related technologies.',
+      'I am a frontend developer who specializes in ReactJS. I have a total of 6+ years of experience working with web applications and possess deep skills in creating modern web applications and user interface components using ReactJS and related technologies.',
       'I can easily develop and customize components with consideration for best practices and ensure high performance, scalability, and accessibility of web applications. Proponent of semantically correct pages.',
       'I am also proficient in using Redux to manage application state and TypeScript to provide type safety and simplify development.'
     ]

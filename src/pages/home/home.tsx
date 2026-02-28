@@ -1,14 +1,12 @@
 import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
 import React from 'react';
-import {Avatar, Box, Chip, Container, Grid, Typography} from "@mui/material";
+import {Box, Container, Grid, Typography} from "@mui/material";
 import Header from "./components/header/header";
 import {ABOUT_ME_DATA} from "../../constants/about-me";
 import {TECHNOLOGIES} from "../../constants";
 import Card from "./components/card/card";
 import Contacts from './components/contacts/contacts'
-import {COMPANIES} from "../../constants/experience";
-import EmptyLogo from "../../assets/images/companies/empty.png";
 import {Skill} from "../../constants/skills";
 import BackgroundText from "./components/background-text/background-text";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -18,6 +16,7 @@ import Education from "./components/education/education";
 import UnitedWidget from "../../components/widgets/united-widget/UnitedWidget";
 import avatarSrc from "../../assets/images/avatar.jpg"
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Companies from "./components/companies/companies";
 
 const montserratTheme = createTheme({
     ...theme,
@@ -83,9 +82,7 @@ const Home = () => {
                             <Contacts />
                         </Grid>
                         <Grid size={{ xs: 12, md: 4, lg: 3}}>
-                            <Card id={'education-section'} title={'Education'}>
-                                <Education />
-                            </Card>
+                            <Education />
                         </Grid>
                         <Grid size={{ xs: 12, md: 4, lg: 3}} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Card p={0} style={{ filter: 'grayscale(1)' }}>
@@ -93,37 +90,7 @@ const Home = () => {
                             </Card>
                         </Grid>
                         <Grid size={12}>
-                            <Card id={'experience-section'} title={'Experience'} flexDirection={'column'} gap={3}>
-                                {COMPANIES.map((company, index) => (
-                                    <Box display={'flex'} gap={1} key={index}>
-                                        <Box>
-                                            <Avatar src={company.logo ? company.logo : EmptyLogo} alt={company.name}/>
-                                        </Box>
-                                        <Box display={'flex'} flexDirection={'column'} minWidth={0} flex={1}>
-                                            <Typography fontWeight={600}>{company.position}</Typography>
-                                            <Typography>{company.name} - {company.type}</Typography>
-                                            <Typography fontSize={14} style={{ opacity: 0.8 }}>{company.startDate} - {company.endDate}</Typography>
-                                            <Typography fontSize={14} style={{ opacity: 0.8 }}>{company.location}</Typography>
-                                            <Box display={'flex'} flexWrap={'wrap'} gap={1} mt={2}>
-                                                {company.skills.map((skill, index) => {
-                                                    const foundSkill = TECHNOLOGIES.find((i) => i.key === skill);
-                                                    return (
-                                                        <Chip key={index} variant={'outlined'} label={foundSkill ? foundSkill.name : ''}/>
-                                                    )
-                                                })}
-                                            </Box>
-                                            <Box mt={2}>
-                                               <ol style={{paddingLeft: 20, listStyle: 'disc', display: 'flex', flexDirection: 'column', gap: 5}}>
-                                                   {company.list && company.list.map((item, index) => (
-                                                       <li key={index}><Typography>{item}</Typography></li>
-                                                   ))}
-                                               </ol>
-                                            </Box>
-                                        </Box>
-
-                                    </Box>
-                                ))}
-                            </Card>
+                            <Companies />
                         </Grid>
                     </Grid>
                 </Box>
