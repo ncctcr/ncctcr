@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4d5bafc8.css",
-    "main.js": "/static/js/main.209f7e83.js",
+    "main.js": "/static/js/main.f80a574e.js",
     "static/js/453.ad631ce7.chunk.js": "/static/js/453.ad631ce7.chunk.js",
     "static/media/sequoia-sunrise.png": "/static/media/sequoia-sunrise.c260bad6ee67dfaff1f9.png",
     "static/media/sonoma-horizon.png": "/static/media/sonoma-horizon.7da3b09dd9555365f7a6.png",
@@ -71,11 +71,11 @@
     "static/media/hide.svg": "/static/media/hide.6724e64ca7deca30351cc9b66bff465d.svg",
     "static/media/resize.svg": "/static/media/resize.f9eedc0d61f9ed7d0e7ea50d3ffe691e.svg",
     "main.4d5bafc8.css.map": "/static/css/main.4d5bafc8.css.map",
-    "main.209f7e83.js.map": "/static/js/main.209f7e83.js.map",
+    "main.f80a574e.js.map": "/static/js/main.f80a574e.js.map",
     "453.ad631ce7.chunk.js.map": "/static/js/453.ad631ce7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d5bafc8.css",
-    "static/js/main.209f7e83.js"
+    "static/js/main.f80a574e.js"
   ]
 }
