@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
-import { useMediaQuery, useTheme } from '@mui/material';
-import MobileView from './components/views/mobile-view/MobileView';
-import DesktopView from './components/views/desktop-view/DesktopView';
+import { Routes, Route } from "react-router";
+import Home from "./pages/home/home";
+import System from "./pages/system/system";
 
 function App() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // < 600px
-
   return (
-    <div>
-      {isMobile ? <MobileView /> : <DesktopView />}
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/system" element={<System />} />
+    </Routes>
   );
 }
 

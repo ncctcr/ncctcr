@@ -1,3 +1,5 @@
+import {TECHNOLOGIES} from "../constants/technologies";
+
 export const shortenText = (text: string, maxLength: number = 15): string => {
   const dotIndex = text.lastIndexOf('.');
   if (dotIndex === -1) return text;
@@ -26,4 +28,8 @@ export const isChromium = (): boolean => {
   const isBrave = (navigator as any).brave !== undefined;
 
   return isChrome || isEdge || isOpera || isBrave;
+}
+
+export const getSkills = (skills: string[]) => {
+  return TECHNOLOGIES.filter((i) => skills.includes(i.key))
 }

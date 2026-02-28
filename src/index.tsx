@@ -3,27 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-// import theme from './theme';
-import { WindowsProvider } from './contexts/WindowContext';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import { BackgroundProvider } from './contexts/BackgroundContext';
-import GothicLion from './assets/backgrounds/gothic-lion.jpg';
-import { createTheme } from './theme/theme';
+import Providers from "./providers";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <BackgroundProvider defaultBackground={`url(${GothicLion})`}>
-      <ThemeProvider theme={createTheme('light')}>
-        <WindowsProvider>
-          <CssBaseline/>
-          <App />
-        </WindowsProvider>
-      </ThemeProvider>
-    </BackgroundProvider>
+    <Providers>
+      <App/>
+    </Providers>
   </React.StrictMode>
 );
 

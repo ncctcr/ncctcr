@@ -3,14 +3,11 @@ import Description from '../../shared/Description';
 import ExperienceIcon from '../../../assets/icons/dock/experience.png';
 import Company from '../../shared/Company';
 import MultiSelect from '../../shared/MultiSelect';
-import { TECHNOLOGIES } from '../../../constants';
 import { Grid } from '@mui/material';
-import { COMPANIES } from './constants';
 import Wrapper from '../../shared/Wrapper';
-
-const getSkills = (skills: string[]) => {
-  return TECHNOLOGIES.filter((i) => skills.includes(i.key))
-}
+import {TECHNOLOGIES} from "../../../constants/technologies";
+import {COMPANIES} from "../../../constants/experience";
+import {getSkills} from "../../../utils/functions";
 
 const Experience = () => {
   const [filters, setFilters] = useState<{skills: string[]}>({

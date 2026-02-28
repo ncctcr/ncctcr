@@ -13,7 +13,6 @@ import AboutMeIcon from '../../../assets/icons/dock/about-me.png';
 import SettingsIcon from '../../../assets/icons/dock/settings.png';
 import Skills from '../../contents/skills/Skills';
 import SelectedView from './components/SelectedView';
-import Experience from '../../contents/experience/Experience';
 import Education from '../../contents/education/Education';
 import Licenses from '../../contents/licenses/Licenses';
 import Contacts from '../../contents/contacts/Contacts';
@@ -23,6 +22,7 @@ import AboutMe from '../../contents/about-me/AboutMe';
 import UnitedWidget from '../../widgets/united-widget/UnitedWidget';
 import AnalogTimeWidget from '../../widgets/analog-time-widget/AnalogTimeWidget';
 import SettingsMobile from '../../contents/settings-mobile/SettingsMobile';
+import Experience from "../../contents/experience/Experience";
 
 const Icon = styled.img`
   width: 100%;

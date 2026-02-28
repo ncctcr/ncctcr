@@ -10,10 +10,11 @@ import ChartJsIcon from '../../../assets/icons/chartjs.png';
 import I18nIcon from '../../../assets/icons/i18n.png';
 import GitIcon from '../../../assets/icons/git.png';
 import ReactMeme from '../../../assets/images/memes/react.png';
+import {Skill, SkillKey} from "../../../constants/skills";
 
 export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; description: string; experience: string[], meme?: string } } = {
-  react: {
-    name: "React",
+  [SkillKey.React]: {
+    name: Skill.React,
     icon: ReactIcon,
     description: "React is a JavaScript library that helps developers build user interfaces for web applications. It simplifies the process of creating interactive and dynamic UIs by breaking down the interface into reusable components.",
     experience: [
@@ -28,8 +29,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
     ],
     meme: ReactMeme,
   },
-  html: {
-    name: "HTML",
+  [SkillKey.HTML]: {
+    name: Skill.HTML,
     icon: HtmlIcon,
     description: "HTML is the backbone of web development, and I have a deep understanding of its syntax, structure, and best practices.",
     experience: [
@@ -40,8 +41,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "I also have experience in optimizing web pages for performance and speed, utilizing techniques such as minification and proper tag usage."
     ]
   },
-  css: {
-    name: "CSS",
+  [SkillKey.CSS]: {
+    name: Skill.CSS,
     icon: CssIcon,
     description: "CSS is a programming language that is used to design web pages. It defines how each element of a web page looks like: its color, size, layout, and other styles.",
     experience: [
@@ -52,8 +53,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "Overall, my years of experience have honed my skills in utilizing CSS to create engaging and functional web experiences."
     ]
   },
-  javascript: {
-    name: "JavaScript",
+  [SkillKey.JavaScript]: {
+    name: Skill.JavaScript,
     icon: JsIcon,
     description: "JavaScript is a programming language used to make web pages interactive. It allows you to do things like show pop-up messages, validate forms, create animations, and dynamically update content on a webpage without needing to reload the entire page.",
     experience: [
@@ -64,8 +65,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "My experience also includes optimizing JavaScript code for performance and accessibility, ensuring smooth and responsive interactions across various browsers and devices."
     ]
   },
-  typescript: {
-    name: "TypeScript",
+  [SkillKey.TypeScript]: {
+    name: Skill.TypeScript,
     icon: TsIcon,
     description: "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
     experience: [
@@ -76,8 +77,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "Additionally, TypeScript's support for modern JavaScript features and tooling integration has empowered me to build scalable and maintainable applications with confidence."
     ]
   },
-  redux: {
-    name: "Redux",
+  [SkillKey.Redux]: {
+    name: Skill.Redux,
     icon: ReduxIcon,
     description: "Redux is an open-source JavaScript library for application state management.",
     experience: [
@@ -88,8 +89,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "By adopting Redux, I've been able to handle larger datasets and more intricate user interactions, ensuring that the applications remain responsive and adaptable to evolving requirements."
     ]
   },
-  mui: {
-    name: "MUI",
+  [SkillKey.MUI]: {
+    name: Skill.MUI,
     icon: MuiIcon,
     description: "MUI is an open-source React component library that implements Google's Material Design. It's comprehensive and can be used in production out of the box.",
     experience: [
@@ -100,8 +101,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "The flexibility and customization options offered by MUI components have allowed me to tailor UI elements to suit the specific needs and branding of each project."
     ]
   },
-  axios: {
-    name: "Axios",
+  [SkillKey.Axios]: {
+    name: Skill.Axios,
     icon: AxiosIcon,
     description: "Axios is a promise-based HTTP Client for node.js and the browser. It is isomorphic (= it can run in the browser and nodejs with the same codebase). On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests",
     experience: [
@@ -112,8 +113,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "This versatility has allowed me to interact with backend APIs seamlessly, whether it's retrieving user information, submitting form data, or updating resource records."
     ]
   },
-  chartjs: {
-    name: "Chart.js",
+  [SkillKey.ChartJS]: {
+    name: Skill.ChartJS,
     icon: ChartJsIcon,
     description: "Chart.js - is a free, open-source JavaScript library for data visualization, which supports eight chart types: bar, line, area, pie (doughnut), bubble, radar, polar, and scatter.",
     experience: [
@@ -124,8 +125,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "The ability to customize chart appearance, labels, colors, and tooltips has enabled me to tailor visualizations to meet specific project requirements and design preferences."
     ]
   },
-  i18n: {
-    name: "i18n",
+  [SkillKey.i18n]: {
+    name: Skill.i18n,
     icon: I18nIcon,
     description: "Internationalization (i18n) is the process of designing and developing software to be adapted for users of different cultures and languages.",
     experience: [
@@ -135,8 +136,8 @@ export const SKILL_VIEWS: { [key: string]: { name: string; icon: string; descrip
       "These libraries offer robust features for managing translations, organizing locale files, and dynamically switching between languages based on user preferences."
     ]
   },
-  git: {
-    name: "Git",
+  [SkillKey.GIT]: {
+    name: Skill.GIT,
     icon: GitIcon,
     description: "Git - is a distributed version control system that tracks changes in any set of computer files.",
     experience: [

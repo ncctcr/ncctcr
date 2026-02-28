@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {useLocation} from "react-router";
 
 interface BackgroundContextType {
   background: string;
@@ -10,29 +11,37 @@ const BackgroundContext = createContext<BackgroundContextType | undefined>(undef
 interface BackgroundProviderProps {
   children: ReactNode;
   defaultBackground?: string;
+  targetId?: string;
 }
 
 export const BackgroundProvider: React.FC<BackgroundProviderProps> = ({
   children,
   defaultBackground = '#ffffff',
+  targetId = 'system'
   }) => {
+  const location = useLocation();
+
   const [background, setBackground] = useState<string>(defaultBackground);
 
   useEffect(() => {
-    document.body.style.backgroundColor = 'black';
+    const element = document.getElementById(targetId);
+    if (!element) return;
+
+    element.style.backgroundColor = 'black';
 
     if (background.startsWith('url')) {
-      document.body.style.backgroundImage = background;
+      element.style.backgroundImage = background;
     } else {
-      document.body.style.backgroundImage = 'none';
-      document.body.style.backgroundColor = background;
+      element.style.backgroundImage = 'none';
+      element.style.backgroundColor = background;
     }
 
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-    document.body.style.backgroundPosition = 'center';
-  }, [background]);
+    element.style.height = '100dvh';
+    element.style.backgroundSize = 'cover';
+    element.style.backgroundRepeat = 'no-repeat';
+    element.style.backgroundAttachment = 'fixed';
+    element.style.backgroundPosition = 'center';
+  }, [background, location.pathname]);
 
   return (
     <BackgroundContext.Provider value={{ background, setBackground }}>

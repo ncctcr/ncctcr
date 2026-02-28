@@ -13,12 +13,12 @@ import { useWindows } from '../../../../../contexts/WindowContext';
 import { TypeWindowSettings, TypeWindowStyles } from '../../../../../interfaces/windows';
 import AboutMe from '../../../../contents/about-me/AboutMe';
 import Skills from '../../../../contents/skills/Skills';
-import Experience from '../../../../contents/experience/Experience';
 import Education from '../../../../contents/education/Education';
 import Licenses from '../../../../contents/licenses/Licenses';
 import Contacts from '../../../../contents/contacts/Contacts';
 import Games from '../../../../contents/games/Games';
 import Settings from '../../../../contents/settings/Settings';
+import Experience from "../../../../contents/experience/Experience";
 
 const Wrapper = styled.div`
 	position: absolute;

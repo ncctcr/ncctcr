@@ -1,0 +1,27 @@
+import {Skill, SkillKey} from "./skills";
+
+export const TECHNOLOGIES: { name: Skill, key: SkillKey }[] = [
+    { name: Skill.React, key: SkillKey.React },
+    { name: Skill.NextJS, key: SkillKey.NextJS },
+    { name: Skill.JavaScript, key: SkillKey.JavaScript },
+    { name: Skill.TypeScript, key: SkillKey.TypeScript },
+    { name: Skill.RestAPI, key: SkillKey.RestAPI },
+    { name: Skill.ReactHooks, key: SkillKey.ReactHooks },
+    { name: Skill.FunctionalProgramming, key: SkillKey.FunctionalProgramming },
+    { name: Skill.CSS, key: SkillKey.CSS },
+    { name: Skill.HTML, key: SkillKey.HTML },
+    { name: Skill.AgileDevelopment, key: SkillKey.AgileDevelopment },
+    { name: Skill.GIT, key: SkillKey.GIT },
+    { name: Skill.Redux, key: SkillKey.Redux },
+    { name: Skill.JSON, key: SkillKey.JSON },
+    { name: Skill.OOP, key: SkillKey.OOP },
+    { name: Skill.JQuery, key: SkillKey.JQuery },
+    { name: Skill.GraphQL, key: SkillKey.GraphQL },
+    { name: Skill.TDD, key: SkillKey.TDD },
+    { name: Skill.Django, key: SkillKey.Django },
+    { name: Skill.Celery, key: SkillKey.Celery },
+    { name: Skill.Vue, key: SkillKey.Vue },
+    { name: Skill.RabbitMQ, key: SkillKey.RabbitMQ },
+    { name: Skill.Python, key: SkillKey.Python },
+    { name: Skill.Angular, key: SkillKey.Angular },
+]

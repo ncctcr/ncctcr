@@ -3,7 +3,7 @@ import { Avatar, Box, Grid, Rating, Typography, Link } from '@mui/material';
 import AvatarImg from '../../../assets/images/avatar.jpg'
 import Block from '../../shared/Block';
 import Wrapper from '../../shared/Wrapper';
-import { ABOUT_ME_DATA, LANGUAGES } from './constants';
+import { ABOUT_ME_DATA, LANGUAGES } from '../../../constants/about-me';
 
 const FONT_SIZE = 14;
 

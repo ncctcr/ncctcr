@@ -16,7 +16,7 @@ export const EDUCATION_DATA = [
     ],
   },
   {
-    title: 'Junior Specialist Diploma',
+    title: 'Junior Diploma',
     brackets: 'E16 041280',
     rows: [
       { name: 'Fullname', value: 'Nesterchuk Mykola' },
@@ -24,7 +24,7 @@ export const EDUCATION_DATA = [
       { name: 'Educational Institution', value: 'Novokakhovsʹkyy College of Instrument Engineering' },
       { name: 'Date of issue', value: '01.07.2016' },
       { name: 'Date of graduation', value: '01.07.2016' },
-      { name: 'Programme Subject Area', value: 'Design, production and maintenance of radio-technical devices' },
+      { name: 'Programme Subject Area', value: 'Radio Engineering' },
       { name: 'Professional Qualification', value: 'Junior specialist radio engineering technician' },
       { name: 'Director', value: 'Glazunova Larysa Ivanivna' },
       { name: 'Name of awarding institution', value: 'Novokakhovsʹkyy College of Instrument Engineering' },

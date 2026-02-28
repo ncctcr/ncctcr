@@ -13,6 +13,13 @@ const palette = {
     "800": "#37474F",
     "900": "#263238",
   },
+  black: {
+    "100": "#e3e3e3",
+    "300": "#c0c0c0",
+    "600": "#6c6c6c",
+    "800": "#212121",
+    "900": "#000000"
+  }
 };
 
 export const darkPalette = {
@@ -39,14 +46,14 @@ export const darkPalette = {
     main: "#FFD54F",
   },
   text: {
-    primary: palette.grey[100],
-    secondary: palette.grey[300],
-    disabled: palette.grey[600],
+    primary: palette.black[100],
+    secondary: palette.black[300],
+    disabled: palette.black[600],
   },
   divider: palette.grey[700],
   background: {
     paper: palette.grey[900],
-    default: palette.grey[800],
+    default: palette.black[900],
   },
   action: {
     selectedOpacity: 0,

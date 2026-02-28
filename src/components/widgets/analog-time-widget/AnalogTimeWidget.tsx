@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 
 const Wrapper = styled.div`
 	width: 100%;
-  aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
 	background: #1a1a1a;
 	border-radius: 17px;
 	display: flex;
@@ -16,12 +16,12 @@ const Wrapper = styled.div`
 
 const Clock = styled.div`
 	width: 100%;
-  aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
 	background: #ffffff;
 	border-radius: 50%;
 	position: relative;
 	border: 2px solid #333;
-  margin: 5%;
+    margin: 5%;
 	container-type: inline-size;
 `
 
@@ -34,14 +34,15 @@ const Marker = styled.div<{type: string}>`
 	margin-left: -0.6%;
 	border-radius: 5px;
 	transform-origin: 50% calc(46% / 0.04); 
-  background: ${({type}) => type === 'main' ? '#1f1f21' : '#b7b7b7'};
-  span {
-    margin-top: 3cqw;
-    margin-left: -5px;
-    position: absolute;
-    font-weight: 600;
-		font-size: 10cqw; /* 10% width Clock */
-  }
+    background: ${({type}) => type === 'main' ? '#1f1f21' : '#b7b7b7'};
+    color: #1a1a1a;
+    span {
+        margin-top: 3cqw;
+        margin-left: -5px;
+        position: absolute;
+        font-weight: 600;
+        font-size: 10cqw; /* 10% width Clock */
+    }
 `
 
 const Brand = styled.div`

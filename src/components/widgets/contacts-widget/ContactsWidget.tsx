@@ -32,21 +32,25 @@ const Item = styled(Box)`
   
 `
 
-const Circle = styled(Box)`
+interface CircleProps {
+  borderWidth?: number;
+}
+
+export const Circle = styled(Box)<CircleProps>`
   display: flex;
-	border: 6px solid rgba(113, 113, 113, 0.44);
-	border-radius: 50%;
-	justify-content: center;
-	align-items: center;
+  border: ${({ borderWidth = 6 }) => borderWidth}px solid rgba(113, 113, 113, 0.44);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s ease-in-out;
   width: 80%;
-	aspect-ratio: 1 / 1;
-	&:hover {
-		border: 6px solid #31ce57;
-	}
-	a {
-		color: #d4d4d4;
-	}
+  aspect-ratio: 1 / 1;
+  &:hover {
+    border: ${({ borderWidth = 6 }) => borderWidth}px solid #31ce57;
+  }
+  a {
+    color: #d4d4d4;
+  }
 `
 
 const ContactsWidget = () => {
