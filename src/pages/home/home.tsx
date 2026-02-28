@@ -87,7 +87,7 @@ const Home = () => {
                                 <Education />
                             </Card>
                         </Grid>
-                        <Grid size={{ xs: 12, md: 4, lg: 3}}>
+                        <Grid size={{ xs: 12, md: 4, lg: 3}} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Card p={0} style={{ filter: 'grayscale(1)' }}>
                                 <UnitedWidget />
                             </Card>
